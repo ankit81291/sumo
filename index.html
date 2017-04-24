@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sumo logic teams</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="app.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="dialog">
+                <div class="dialog-overlay"></div>
+                <div class="dialog-container">
+                    <div class="dialog-content">
+                      <div class="close-button" onclick="app.onCancel()">X</div>
+                      <div class="main-content">
+                        <div class="title">Select an Employee</div>
+                        <section class="form">
+                            <div class="welcome field">
+                              <input type="checkbox" name="sendWelcome" />
+                              <label for="sendWelcome">Send welcome email to employee</label>
+                            </div>
+                            <div class="team field">
+                              <div class="input-label">Select a team in the organisation</div>
+                              <div class="input-field">
+                                <select class="form-field" id="team-select" name="team" onchange="app.onTeamSelect(this)">
+                                  <option selected disabled>Select team...</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="employee field">
+                              <div class="input-label">Select an employee</div>
+                              <div class="input-field">
+                                <input type="text" name="employee" id="employee-text" class="autocomplete form-field disabled" placeholder="Select employee" />
+                              </div>
+                            </div>
+                        </section>
+                        <section class="buttons">
+                          <button class="secondary" onclick="app.onCancel()">Cancel</button>
+                          <button class="primary" onclick="app.onSubmit()">OK</button>
+                        </section>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="autocomplete-options" id="autocomplete-options">
+            </div>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

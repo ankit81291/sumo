@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.dialog {
+  z-index: 1500;
+  top: 0px;
+  left: 0px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+.dialog .dialog-overlay {
+  left: 0px;
+  opacity: 1;
+  background: rgba(255, 255, 255);
+  position: fixed;
+  height: 100%;
+  z-index: 1400;
+  width: 100%;
+  top: 0px;
+}
+
+.dialog .dialog-container {
+  position: relative;
+  top: 64px;
+  width: 35%;
+  box-sizing: border-box;
+  margin: 0px auto;
+  z-index: 1500;
+  max-width: 1200px;
+  opacity: 1;
+  background: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 45px;
+  border-radius: 2px;
+  border: 1px solid #f5f5f5;
+}
+
+.dialog .dialog-container .dialog-content {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 8px -4px;
+  max-height: 625px;
+  position: relative;
+}
+
+.dialog-content .close-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.dialog-content .main-content {
+  padding: 20px;
+}
+
+.main-content .title {
+  font-size: 20px;
+  color: #61b8eb;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.main-content .form {
+  margin: 10px;
+}
+
+.main-content .form .field {
+  margin: 10px 0;
+}
+
+.main-content .form .welcome input[type="checkbox"] {
+  margin: 0;
+}
+
+.main-content .form .field .input-label {
+  padding: 5px 0;
+}
+
+.main-content .form .field .form-field {
+  width: 90%;
+  background: #dddddd;
+  border: 0;
+  height: 34px;
+  padding: 0 3px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.form-field.autocomplete.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.autocomplete-options {
+  width: 360px;
+  box-sizing: border-box;
+  background: #e0e0e0;
+  border: 1px solid #dddddd;
+  position: fixed;
+  /*top: 281px;
+  left: 453px;*/
+  z-index: 2000;
+  display: none;
+}
+
+.autocomplete-options .option {
+  border-bottom: 1px solid #bebebe;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.autocomplete-options .option:hover {
+  background: #61b8eb;
+}
+
+.buttons {
+  margin: 20px 42px;
+  text-align: right;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: 0;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+button.primary {
+  background: #61b8eb;
+  color: white;
+}
